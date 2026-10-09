@@ -5,56 +5,45 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
-
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.activity_main)
 
-        val countOutput= findViewById<TextView>(R.id.countOutput)
+        val countOutput = findViewById<TextView>(R.id.countOutput)
+        val subButton = findViewById<Button>(R.id.subtractionButton)
+        val addButton = findViewById<Button>(R.id.addButton)
+        val resetButton = findViewById<Button>(R.id.resetButton)
+        val stepButton = findViewById<Button>(R.id.stepButton)
+        val resetStepButton = findViewById<Button>(R.id.resetstepbutton)
 
-        val subButton =findViewById<Button>(R.id.subtractionButton)
-
-        val addButton=findViewById<Button>(R.id.addButton)
-
-        val resetbutton =findViewById<Button>(R.id.resetButton)
-
-        val stepButton =findViewById<Button>(R.id.stepButton)
-
-        val resetstepButton =findViewById<Button>(R.id.resetstepbutton)
-
-        var count =0
-        var stepsize=1
-
-
-
+        var count = 0
+        var stepSize = 1
 
         subButton.setOnClickListener {
-            count =count -stepsize
-            countOutput.text=count.toString()
+            count -= stepSize
+            countOutput.text = count.toString()
         }
 
-
         addButton.setOnClickListener {
-            count =count +stepsize
-            countOutput.text=count.toString()
+            count += stepSize
+            countOutput.text = count.toString()
         }
 
         stepButton.setOnClickListener {
-           stepsize=stepsize+1
+            stepSize += 1
+            stepButton.text = "Step: $stepSize"
         }
 
-        resetbutton.setOnClickListener {
-            count=0
-            countOutput.text=count.toString()
+        resetButton.setOnClickListener {
+            count = 0
+            countOutput.text = count.toString()
         }
 
-        resetstepButton.setOnClickListener {
-            stepsize=1
+        resetStepButton.setOnClickListener {
+            stepSize = 1
+            stepButton.text = "Step: $stepSize"
         }
-
-
-
     }
 }
