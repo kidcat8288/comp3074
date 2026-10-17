@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+        <TextView
+
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Pay Calculator"
+            android:textColor="@color/material_dynamic_neutral30"
+            android:textSize="32sp"
+
+
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteY="16dp" />
+
+
+
+
+        <TextView
+            android:id="@+id/labelHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hours Worked"
+            android:textSize="18sp"
+
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="16dp"
+
+            app:layout_constraintTop_toBottomOf="@id/titleText"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+
+
+        <EditText
+            android:id="@+id/editHours"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:background="@drawable/input_border"
+            android:padding="12dp"
+
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+
+            app:layout_constraintTop_toBottomOf="@id/labelHours"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+
+        <TextView
+            android:id="@+id/labelHoursRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hourly Rate ($)"
+            android:textSize="18sp"
+
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="16dp"
+
+            app:layout_constraintTop_toBottomOf="@id/editHours"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+
+        <EditText
+            android:id="@+id/editHoursRate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:background="@drawable/input_border"
+            android:padding="12dp"
+
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+
+            app:layout_constraintTop_toBottomOf="@id/labelHoursRate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/taxRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tax Rate (%)"
+            android:textSize="18sp"
+
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="16dp"
+
+            app:layout_constraintTop_toBottomOf="@id/editHoursRate"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+
+        <EditText
+            android:id="@+id/editTaxRate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:background="@drawable/input_border"
+            android:padding="12dp"
+
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+
+            app:layout_constraintTop_toBottomOf="@id/taxRate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+            android:id="@+id/btnCalculate"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Calculate"
+
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+
+            app:layout_constraintTop_toBottomOf="@id/editTaxRate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+
+
+
+        <Button
+            android:id="@+id/btnAbout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About"
+
+            android:layout_marginTop="12dp"
+
+            app:layout_constraintTop_toBottomOf="@id/btnCalculate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+
+        <TextView
+            android:id="@+id/textPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pay: --"
+            android:textSize="18sp"
+
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="16dp"
+
+            app:layout_constraintTop_toBottomOf="@id/btnAbout"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+
+
+        <TextView
+            android:id="@+id/textOvertime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Overtime Pay: --"
+            android:textSize="18sp"
+
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="16dp"
+
+            app:layout_constraintTop_toBottomOf="@id/textPay"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+        <TextView
+            android:id="@+id/textTotalPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Pay: --"
+            android:textSize="18sp"
+
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="16dp"
+
+            app:layout_constraintTop_toBottomOf="@id/textOvertime"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+        <TextView
+            android:id="@+id/textTax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tax: --"
+            android:textSize="18sp"
+
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="16dp"
+
+            app:layout_constraintTop_toBottomOf="@id/textTotalPay"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
