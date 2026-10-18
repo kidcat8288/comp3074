@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -)",
+      "Bash(sed -i 's/$/\\\\r/' MainActivity.kt && git diff --stat)",
+      "Bash(cd /tmp)",
+      "Bash(python -I -)"
+    ]
+  }
+}
